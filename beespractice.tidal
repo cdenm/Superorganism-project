@@ -1,0 +1,37 @@
+setcps (160/120)
+
+do
+
+d1 $ degradeBy 0.25 $ sound "<beeperc*8>" # gain 1.6 # pan sine # speed (sine + 1) # room 0.5
+
+d3 $ degradeBy 0.25  $ sound "<bug*4 ~ [purr*4] humbird*4 heart, heart:1 noise>" # n (irand 3) # speed (1) # legato 1 # room 0.8 # pan sine # gain 1.4
+
+d1  $ degradeBy 0.5 $ sound "<beeperc*8 whip/2 ~ beeperc*16 drops*1>" # n (irand 3) # speed (0.5) # legato 1
+
+d2 $ degradeBy 0 $ sound "[heart/4]" # n (irand 2)  # room 0.8 # gain 4
+
+do
+d3 $ loopAt 4 $ sound "beeloop:1" # gain 0.6
+d4 $ loopAt 1 $ sound "beeloop:2" # gain 0.6
+
+d2 $ stut 8 0.5 0.25 $ sound "choir" # legato 1 # gain 1 # speed 2
+
+d2 $ striate 16 $ sound "bug/2" # legato 1  # gain 1.2 # speed 2
+
+d5 $ striate 4 $ sound "beeloop:1" # gain 1.5 # up "-20"
+
+d5 $ degradeBy 0 $ sound "drops:1*4" # speed 1 # legato 1 # up "20 10" # room 0.2 # gain 2
+
+d4 $ degradeBy 0.15 $ randslice "128"  $ sound "<choir*4>" # legato 1 # speed 1  # gain 1 # vowel "a e i o u"
+
+d6 $ loopAt 32 $ sound "choir"
+
+do
+d1 $ silence
+d2 $ silence
+d3 $ silence
+d4 $ silence
+d5 $ silence
+d6 $ silence
+
+hush

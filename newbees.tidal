@@ -1,0 +1,30 @@
+setcps (60/120)
+
+d1 $ striate 1 $ stut 8 0.75 1 $ sound "beeperc:0*32" # pan sine # speed (sine - 1) # gain 1.8
+
+d1 $ silence
+
+d2 $ striate 8 $ sound "beeloop:4" # speed 1 # gain 1.5
+
+d2 $ silence
+
+
+d6 $ striate 1 $ sound "beeloop:3" # speed 0.5 # gain 1.5 # up ("<-8 -12 -10>") # cut 1
+
+d6 $ silence
+
+
+d3 $ degradeBy 0.25 $ sound "<beeperc*8>" # n (irand 3) # gain 2
+
+d3 $ silence
+
+d5 $ degradeBy 0 $ sound "<beeperc:4*4>" # gain 0.9 # speed 8 # up "-20 -10 0" # lpf 400
+
+d5 $ silence
+
+d4 $ randslice 128 $ degradeBy 0.5 $ loopAt 1 $ sound "[bee*16 ]" # speed 0.5 # lpf 5000 # orbit 2 # legato 1 # gain 2
+
+d4 silence
+
+
+hush

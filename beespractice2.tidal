@@ -1,0 +1,31 @@
+setcps (60/120)
+
+do
+d3 $ loopat $ sound "beeloop:1" # speed 0.5 # up "0"
+
+d6 $ striate 8 $ sound "beeloop:3" # speed 0.5
+
+d7 $ degradeBy 0.25 $ sound "<heart:0 heart:1>*4 ~"  # gain 0.8 # speed 2
+
+d4 $ degradeBy 0.25 $ sound "beeperc*16" # n (irand 3) # speed 1 # pan sine # gain 2 # room 0.8
+
+d2 $ striate 16 $ sound "bug/2" # legato 1  # gain 1.2 # speed 1
+
+
+
+
+
+d3 $ degradeBy 0.25 $ sound "humbird" # legato 1 # gain 1 # room 0.8
+d4 $ sound "beeperc*" # pan sine # speed 4 # 0.5
+
+d1 $ degradeBy 0 $ randslice 128 $ sound "<bee*8 whip*8>" # legato 1 # gain 1.2
+
+
+d6 $ loopAt 16 $ sound "whale"
+
+d3 silence
+d1 silence
+d2 silence
+d6 silence
+d4 silence
+hush

@@ -1,0 +1,22 @@
+setcps (20/120)
+
+d1 $ sound "bee" # pan cosine # speed (sine + 1) # vowel "a e i o u"
+
+d1 $ chop 4 $ sound "<bee:4*2>" # room 0.8 # legato 1
+
+d2 $ randslice "<64>" $ sound "[bee*20 ~ bee*8 bee*60 ~ ~ bee]" # cut 1 # lpf 900
+d2 $ silence
+
+d3 $ randslice "<64 128 256>" $ shuffle 1 $ sound "[bee:2*20 ~ bee/2 bee:1*15 bee:3*20 ~ ~ bee*10 ~ ~ ~ bee  ~ ~ ~ ~ ~ ~ ~ ~]" # cut 1
+
+d5 $ sound "[bee bee]" # cut 1 # speed 2
+
+d5 silence
+
+d3 $ silence
+
+d4 $ rarely ( striate ( irand 256)) $ s "bee:2" # speed ( choose [1, 2, 4]) # delay 0.3 # legato 4 # gain 0.8 # room 0.8 # up (slow 4 "-2 0 -4")
+d4 $ silence
+
+
+hush
